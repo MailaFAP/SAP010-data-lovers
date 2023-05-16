@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.imagem {
+  position: absolute;
+  width: 1440px;
+  height: 789px;
+  left: 0px;
+  top: 0px;
+}
+
+.logo {
+  position: absolute;
+  width: 307px;
+  height: 136px;
+  left: 51px;
+  top: 49px;
+}
+
+.botao {
+  position: absolute;
+  width: 347px;
+  height: 59px;
+  left: -11px;
+  top: 1px;
+
+  background: #252525;
+  border-radius: 35px;
+  color: #bdbdbd;
+}
+
+h1 {
+  position: absolute;
+  width: 621px;
+  height: 101px;
+  left: 38px;
+  top: 350px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 116px;
+
+  color: #ffffff;
+}
+
+.pontuaçao {
+  position: absolute;
+  width: 402px;
+  height: 32px;
+  left: 43px;
+  top: 509px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #008c06;
+  display: flexbox;
+}
+
+.ano-e-temporada {
+  position: absolute;
+  width: 402px;
+  height: 32px;
+  left: 160px;
+  top: 509px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+  display: flexbox;
+}
+
+.sintese {
+  position: absolute;
+  width: 622px;
+  height: 87px;
+  left: 42px;
+  top: 550px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #747474;
+}
+
+.personagens {
+  position: absolute;
+  width: 1440px;
+  height: 235px;
+  left: 0px;
+  top: 789px;
+
+  background: #000000;
+}
+
+.espaço-setas {
+  position: absolute;
+  width: 42px;
+  height: 234px;
+  left: 0px;
+  top: 790px;
+  background: #000000;
+}
+
+.espaço-setas .setas {
+  position: absolute;
+  width: 14px;
+  height: 25px;
+  left: 14px;
+  top: 894px;
+  border: 5px solid #747474;
+}
