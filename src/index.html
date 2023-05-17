@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="principal" id="principal">
-      <div class="imagem" id="imagem">
-        <img src="img/Group 8.png" alt="capa da série">
-      </div>
-      <div class="logo" id="logo">
-        <img src="img/Group 1.png" alt="Logo Breaking Bad">
-      </div>
-      <div class="pesquisa" id="pesquisa">
-        <button class="botao" id="botao">Pesquisar Personagem</button>
-      </div>
-      <div class="titulo" id="titulo">
-        <h1>Breaking Bad</h1>
-      </div>
-      <div class="classificaçao" id="classificaçao">
-        <p class="pontuaçao">9.8 pontos</p>
-        <p class="ano-e-temporada">   2008   5 temporadas</p>
-      </div>
-      <div class="texto" id="texto">
-        <p class="sintese">Walter White, um humilde professor de química que vê sua vida se transformar quando descobre ser portador de um câncer terminal. Com um passado brilhante como pesquisador, Walter amarga agora uma terrível situação financeira trabalhando como professor em uma escola de ensino médio.</p>
-      </div>
-    </section>
 
-    <section class="personagens" id="personagens">
-      <div class="espaço-setas">
-        <div class="setas"></div>
-      </div>
-    </section>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <figure class="logo" id="logo">
+      <img src="img/Group 1.png" alt="Logo Breaking Bad">
+    </figure>
+    <div class="pesquisa" id="pesquisa">
+      <button class="botao" id="botao">Pesquisar Personagem</button>
+    </div>
+  </header>
+  <section class="sectionh1" id="sectionh1">
+    <div class="titulo" id="titulo">
+      <h1>Breaking Bad</h1>
+    </div>
+    <div class="classificaçao" id="classificaçao">
+      <p class="pontuaçao">9.8 pontos</p>
+      <p class="ano-e-temporada"> 2008 5 temporadas</p>
+    </div>
+    <article class="texto" id="texto">
+      <p class="sintese">Walter White, um humilde professor de química que vê sua vida se transformar quando descobre
+        ser
+        portador de um câncer terminal. Com um passado brilhante como pesquisador, Walter amarga agora uma terrível
+        situação financeira trabalhando como professor em uma escola de ensino médio.</p>
+    </article>
+  </section>
+
+  <footer class="personagens" id="personagens">
+    <div class="espaço-setas">
+      <div class="setas"></div>
+    </div>
+  </footer>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

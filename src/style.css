@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url(img/Group\ 8.png);
 }
 
 .imagem {
@@ -14,7 +15,7 @@ body {
   top: 0px;
 }
 
-.logo {
+.header.logo {
   position: absolute;
   width: 307px;
   height: 136px;
@@ -108,22 +109,4 @@ h1 {
   top: 789px;
 
   background: #000000;
-}
-
-.espaço-setas {
-  position: absolute;
-  width: 42px;
-  height: 234px;
-  left: 0px;
-  top: 790px;
-  background: #000000;
-}
-
-.espaço-setas .setas {
-  position: absolute;
-  width: 14px;
-  height: 25px;
-  left: 14px;
-  top: 894px;
-  border: 5px solid #747474;
 }
