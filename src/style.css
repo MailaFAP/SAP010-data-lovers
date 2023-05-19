@@ -6,12 +6,13 @@ body {
   box-sizing: border-box;
   background-image: url(img/Group\ 8.png);
 
+
   background-size: cover;
   background-position: center;
   width: 100vh;
   height: 100vh; /*altura*/
   
-}
+
 
 
 .header.logo {
