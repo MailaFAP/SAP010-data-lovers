@@ -6,12 +6,13 @@ body {
   box-sizing: border-box;
   background-image: url(img/Group\ 8.png);
 
+
   background-size: cover;
   background-position: center;
   width: 100vh;
   height: 100vh; /*altura*/
 }
-/*comentario2*/
+
 
 .header.logo {
   position: absolute;
@@ -26,6 +27,7 @@ body {
   width: 347px;
   height: 59px;
   left: 75%;
+  
   top: 49px;
   background: #292929de;
   border-radius: 35px;
@@ -109,7 +111,7 @@ h1 {
 
 .personagens {
   position: absolute;
-  width: 100%;
+  width: 1440px;
   height: 235px;
   left: 0px;
   top: 789px;
