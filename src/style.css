@@ -5,7 +5,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-image: url(img/Group\ 8.png);
+
+
+  background-size: cover;
+  background-position: center;
+  width: 100vh;
+  height: 100vh; /*altura*/
 }
+
 
 .header.logo {
   position: absolute;
@@ -19,7 +26,8 @@ body {
   position: absolute;
   width: 347px;
   height: 59px;
-  left: 1036px; /*aqui é onde ajusto o botão para ir para a direita, o quão afastado da esquerda o botão está*/
+  left: 75%;
+  
   top: 49px;
   background: #292929de;
   border-radius: 35px;
@@ -134,7 +142,6 @@ h1 {
   right: 0;
 }
 
-
 aside {
   position: absolute;
   width: 397px;
@@ -145,7 +152,6 @@ aside {
 }
 
 ul {
-  color: #ffffff;
   list-style: none;
   flex-direction: column;
   text-align: center;
@@ -154,7 +160,5 @@ ul {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
-
-
