@@ -5,7 +5,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-image: url(img/Group\ 8.png);
-  display:flex;
+  display: flex;
+  background-color: #000000;
 
   background-size: cover;
   background-position: center;
@@ -14,8 +15,8 @@ body {
   background-repeat: no-repeat;
 }
 
-header{
-  position:absolute;
+header {
+  position: absolute;
   width: 100vw;
 }
 
@@ -32,7 +33,7 @@ header{
   width: 347px;
   height: 59px;
   left: 75%;
-  
+
   top: 49px;
   background: #292929de;
   border-radius: 35px;
@@ -113,7 +114,6 @@ h1 {
 }
 
 .personagens {
-  position: absolute;
   width: 100%;
   height: 235px;
   left: 0px;
@@ -123,6 +123,7 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+ 
 }
 
 .seta-esquerda {
@@ -166,10 +167,5 @@ ul {
   color: #bdbdbd;
 }
 
-@media screen and (max-width: 768px){
-  body{
-    background-image: url(img/Group\ 8.png);
-    width: 390px;
-    height: 760px;
-  }
-}
+
+
