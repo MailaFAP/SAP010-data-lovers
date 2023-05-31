@@ -1,4 +1,4 @@
-
+import data from "./data/breakingbad/breakingbad.js";
 
 function imagens() {
     for(const i in data.breaking_bad) {
