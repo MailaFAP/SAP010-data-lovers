@@ -1,11 +1,14 @@
-// estas funciones son de ejemplo
 
 
-/*const info = new Array(breakingbad.breaking_bad);
-let nomes = info.filter(i => i === name);
-console.log(nome);
+function filtrarCategorias(dados, categoria) {
+  return dados.filter(i => i.category === categoria);
+}
 
-export const anotherExample = () => {
-  return 'OMG';
-};*/
+function filtrarStatus(dados, status) {
+  return dados.filter(i => i.status === status);
+}
 
+export default {
+  filtrarCategorias: filtrarCategorias, 
+  filtrarStatus: filtrarStatus
+};
