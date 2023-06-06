@@ -1,7 +1,6 @@
 import data from "./data/breakingbad/breakingbad.js";
 import info from "./data.js";
 
-
 const imgs = document.getElementById("imgs-footer");
 const dados = data.breaking_bad;
 const btnShow = document.getElementById("botao");
@@ -27,6 +26,40 @@ function imagens(breaking_bad) {
 }
 imagens(dados);
 
+const controle = document.querySelectorAll(".seta");
+let currentItem = 0;
+let maxItens = document.querySelectorAll(".imgs-personagens").length;
+
+controle.forEach((control) => {
+  control.addEventListener("click", () => {
+    const isLeft = control.classList.contains("seta-esquerda");
+    if (isLeft) {
+      currentItem -= 9;
+    } else {
+      currentItem += 9;
+    }
+
+    console.log(currentItem);
+
+    if (currentItem >= maxItens) { //se o numero atual for maior ou igual ao numero máximo de itens, volta para o inicio
+      currentItem = 0;
+    }
+
+    if (currentItem < 0) {//se o numero atual for menor que zero, vai para o final da lista
+      currentItem = maxItens - 1;
+    }
+
+    const itens = document.querySelectorAll(".imgs-personagens");
+    itens[currentItem].scrollIntoView({
+      behavior: "smooth",
+      inline: "start", //alinha de maneira horizontal no centro
+    });
+  });
+});
+
+function atualizarItens() {
+  maxItens = document.querySelectorAll(".imgs-personagens").length;
+}
 
 
 listHidden.style.display = "none"; // o estado inicial vai ser com o elemento escondido
@@ -59,26 +92,32 @@ item2.addEventListener("click", () => {
 
 bbad.addEventListener("click", () => {
   imagens(info.filtrarCategorias(dados, bbad.innerHTML));
+  atualizarItens()
 });
 
 bcSaul.addEventListener("click", () => {
   imagens(info.filtrarCategorias(dados, bcSaul.innerHTML));
+  atualizarItens()
 });
 
 bbtter.addEventListener("click", () => {
   imagens(info.filtrarCategorias(dados, bbtter.innerHTML));
+  atualizarItens()
 });
 
 alive.addEventListener("click", () => {
   imagens(info.filtrarStatus(dados, alive.innerHTML));
+  atualizarItens()
 });
 
 dead.addEventListener("click", () => {
   imagens(info.filtrarStatus(dados, dead.innerHTML));
+  atualizarItens()
 });
 
 deceased.addEventListener("click", () => {
   imagens(info.filtrarStatus(dados, deceased.innerHTML));
+  atualizarItens()
 });
 
 

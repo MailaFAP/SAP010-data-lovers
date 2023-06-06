@@ -8,7 +8,9 @@ function filtrarStatus(dados, status) {
   return dados.filter(i => i.status === status);
 }
 
+
+
 export default {
   filtrarCategorias: filtrarCategorias, 
-  filtrarStatus: filtrarStatus
+  filtrarStatus: filtrarStatus,
 };
