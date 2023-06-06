@@ -9,13 +9,18 @@ const listHidden = document.getElementById("aside");
 const subItens1 = document.getElementById("subItens1");
 const subItens2 = document.getElementById("subItens2");
 const item1 = document.getElementById("filtro-status");
-const item2 =document.getElementById("filtro-categoria");
+const item2 = document.getElementById("filtro-categoria");
 const bbad = document.getElementById("Breaking-Bad");
 const bcSaul = document.getElementById("Better-Cal-Saul");
 const bbtter = document.getElementById("Breaking-Better");
 const alive = document.getElementById("alive");
 const deceased = document.getElementById("deceased");
 const dead = document.getElementById("dead");
+let dadosFiltrados = dados;
+const ordenar = document.getElementById("itemOrdenar");
+const subOrdenar =document.getElementById("subItemOrdenar");
+const aZ = document.getElementById("a-z");
+const zA = document.getElementById("z-a");
 
 function imagens(breaking_bad) {
   imgs.innerHTML = breaking_bad
@@ -57,29 +62,55 @@ item2.addEventListener("click", () => {
   }
 });
 
+subOrdenar.style.display = "none"; 
+ordenar.addEventListener("click", () => {
+  if (subOrdenar.style.display === "none") {  
+    subOrdenar.style.display = "block";
+  } else {
+    subOrdenar.style.display = "none";
+  }
+});
+
 bbad.addEventListener("click", () => {
-  imagens(info.filtrarCategorias(dados, bbad.innerHTML));
+  dadosFiltrados= info.filtrarCategorias(dados, bbad.innerHTML);
+  imagens(dadosFiltrados);
 });
 
 bcSaul.addEventListener("click", () => {
-  imagens(info.filtrarCategorias(dados, bcSaul.innerHTML));
+  dadosFiltrados = info.filtrarCategorias(dados, bcSaul.innerHTML);
+  imagens(dadosFiltrados);
 });
 
 bbtter.addEventListener("click", () => {
-  imagens(info.filtrarCategorias(dados, bbtter.innerHTML));
+  dadosFiltrados = info.filtrarCategorias(dados, bbtter.innerHTML);
+  imagens(dadosFiltrados);
 });
 
 alive.addEventListener("click", () => {
-  imagens(info.filtrarStatus(dados, alive.innerHTML));
+  dadosFiltrados = info.filtrarStatus(dados, alive.innerHTML);
+  imagens(dadosFiltrados);
 });
 
 dead.addEventListener("click", () => {
-  imagens(info.filtrarStatus(dados, dead.innerHTML));
+  dadosFiltrados = info.filtrarStatus(dados, dead.innerHTML);
+  imagens(dadosFiltrados);
 });
 
 deceased.addEventListener("click", () => {
-  imagens(info.filtrarStatus(dados, deceased.innerHTML));
+  dadosFiltrados = info.filtrarStatus(dados, deceased.innerHTML);
+  imagens(dadosFiltrados);
 });
+
+aZ.addEventListener("click", () => {
+  dadosFiltrados = info.ordenar(dadosFiltrados, aZ.innerHTML);
+  imagens(dadosFiltrados);
+});
+
+zA.addEventListener("click", () => {
+  dadosFiltrados = info.ordenar(dadosFiltrados, zA.innerHTML);
+  imagens(dadosFiltrados);
+});
+
 
 
 
