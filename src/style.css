@@ -129,12 +129,22 @@ h1 {
   display: flex;
   flex-direction: column; /*antes era row*/
   align-items: center;
-  overflow-x: hidden; /*tira a barra lateral*/
+  overflow-x: auto; 
+  overflow-y: hidden;
+  white-space: nowrap;
+ -ms-overflow-style: none; /* IE and Edge */
+ scrollbar-width: none; /* Firefox */
 }
+
+.personagens::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .imgs-personagens {
   border-radius: 10px;
-  height: 235px;
+  height: 230px;
   width: 177px;
   transition: all 0.2s;
   opacity: 80%;
@@ -149,7 +159,7 @@ h1 {
 }
 
 .seta-esquerda {
-  position: absolute;
+  position: fixed;
   width: 42px;
   height: 234px;
   display: flex;
@@ -158,10 +168,11 @@ h1 {
   left: 0;
   background: #000000;
   cursor: pointer;
+  z-index: 99;
 }
 
 .seta-direita {
-  position: absolute;
+  position: fixed;
   width: 42px;
   height: 234px;
   display: flex;
@@ -196,8 +207,9 @@ h1 {
 a {
   color: #bdbdbd;
   text-decoration: none; 
-  cursor: pointer;  
+  cursor: pointer; 
 }
+
 
 .subItens1 {
   display: none;
