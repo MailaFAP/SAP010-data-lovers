@@ -200,7 +200,7 @@ h1 {
   font-family: "Noto Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   color: #bdbdbd;
 }
 
@@ -213,10 +213,20 @@ a {
 
 .subItens1 {
   display: none;
+  text-align: center;
+  font-size: 16px;
 }
 
 .subItens2 {
   display: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.subItemOrdenar {
+  display: none;
+  text-align: center;
+  font-size: 16px;
 }
 
 @media (min-width: 385px) and (max-width: 768px) {
