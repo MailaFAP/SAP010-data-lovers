@@ -21,6 +21,7 @@ const subOrdenar = document.getElementById("subItemOrdenar");
 const aZ = document.getElementById("a-z");
 const zA = document.getElementById("z-a");
 
+
 function imagens(breaking_bad) {
   imgs.innerHTML = breaking_bad
     .map(
@@ -107,19 +108,22 @@ bbad.addEventListener("click", () => {
   dadosFiltrados = info.filtrarCategorias(dados, bbad.innerHTML);
   imagens(dadosFiltrados);
   atualizarItens();
-  calculoAgregadoCategorias(dados);
+  calculoAgregadoCategoria(dados, "Breaking Bad");
 });
 
 bcSaul.addEventListener("click", () => {
   dadosFiltrados = info.filtrarCategorias(dados, bcSaul.innerHTML);
   imagens(dadosFiltrados);
   atualizarItens();
+  calculoAgregadoCategoria(dados, "Better Call Saul");
+  
 });
 
 bbtter.addEventListener("click", () => {
   dadosFiltrados = info.filtrarCategorias(dados, bbtter.innerHTML);
   imagens(dadosFiltrados);
   atualizarItens();
+  calculoAgregadoCategoria(dados, "Breaking Bad, Better Call Saul");
 });
 
 alive.addEventListener("click", () => {
@@ -152,23 +156,20 @@ zA.addEventListener("click", () => {
   atualizarItens();
 });
 
-/*
-const teste = info.filtrar(20, 62).toFixed(2);
-console.log(teste);
-*/
-function calculoAgregadoCategorias(breaking_bad) {
-  const objetosVerdadeiros = breaking_bad.filter(
-    (objeto) => objeto.category === "Breaking Bad"
+
+function calculoAgregadoCategoria(dados, category) {
+  const objetosVerdadeiros = dados.filter(
+    (objeto) => objeto.category === category
   );
   // Calcula a porcentagem em relação ao tamanho total da array original
   const porcentagem = info.calculoAgregado(
     objetosVerdadeiros.length,
-    breaking_bad.length
+    dados.length
   );
 
-  console.log(
-    `A porcentagem de personagens de Breaking Bad é de ${porcentagem.toFixed(
-      2
-    )}%.`
-  );
+  const mensagem = `A porcentagem dos personagens de ${category} é de ${porcentagem.toFixed(2)}%.`;
+  const resultadoElemento = document.getElementById("porcentagem-msg");
+  resultadoElemento.textContent = mensagem; //Atualiza o conteúdo do elemento com a mensagem
+  
+
 }

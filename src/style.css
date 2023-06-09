@@ -58,7 +58,7 @@ h1 {
   height: 100px;
   left: 38px;
   top: 35vh; /*350px*/
-  margin: 0; 
+  margin: 0;
 
   font-family: "Noto Sans", sans-serif;
   font-style: normal;
@@ -155,7 +155,8 @@ h1 {
   transform: scale(1);
 }
 
-.seta-esquerda, .seta-direita {
+.seta-esquerda,
+.seta-direita {
   position: fixed;
   width: 42px;
   height: 234px;
@@ -212,6 +213,22 @@ li {
 .subItemOrdenar {
   display: none;
 }
+
+.porcentagem-msg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 2.5%;/*43px*/
+  top: 32%;/*32vh*/
+
+  width: auto;
+  height:auto;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #bdbdbd
+}
+
 
 @media (min-width: 385px) and (max-width: 768px) {
   body {
@@ -279,6 +296,11 @@ li {
     max-width: 347px;
     left: 47%;
   }
+
+  .porcentagem-msg {
+    left: 22px;
+    top: 45%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -320,6 +342,10 @@ li {
     width: 550px;
     height: 150px;
   }
+  .porcentagem-msg {
+    left: 41px;
+    top: 43%;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -327,7 +353,7 @@ li {
   .botao {
     width: 100%;
     max-width: 347px;
-    left: 65%;;
+    left: 65%;
   }
 
   .aside {
@@ -335,7 +361,7 @@ li {
     width: 100%;
     max-width: 400px;
     left: 63%;
-  } 
+  }
 
   h1 {
     width: 720px;
@@ -358,5 +384,10 @@ li {
   .sintese {
     top: 60vh;
     width: 650px;
+  }
+
+  .porcentagem-msg {
+    left: 41px;
+    top: 43%;
   }
 }
