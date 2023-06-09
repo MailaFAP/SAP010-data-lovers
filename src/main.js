@@ -17,7 +17,7 @@ const deceased = document.getElementById("deceased");
 const dead = document.getElementById("dead");
 let dadosFiltrados = dados;
 const ordenar = document.getElementById("itemOrdenar");
-const subOrdenar =document.getElementById("subItemOrdenar");
+const subOrdenar = document.getElementById("subItemOrdenar");
 const aZ = document.getElementById("a-z");
 const zA = document.getElementById("z-a");
 
@@ -44,13 +44,13 @@ controle.forEach((control) => {
       currentItem += 9;
     }
 
-    console.log(currentItem);
-
-    if (currentItem >= maxItens) { //se o numero atual for maior ou igual ao numero máximo de itens, volta para o inicio
+    if (currentItem >= maxItens) {
+      //se o numero atual for maior ou igual ao numero máximo de itens, volta para o inicio
       currentItem = 0;
     }
 
-    if (currentItem < 0) {//se o numero atual for menor que zero, vai para o final da lista
+    if (currentItem < 0) {
+      //se o numero atual for menor que zero, vai para o final da lista
       currentItem = maxItens - 1;
     }
 
@@ -66,7 +66,6 @@ function atualizarItens() {
   maxItens = document.querySelectorAll(".imgs-personagens").length;
 }
 
-
 listHidden.style.display = "none"; // o estado inicial vai ser com o elemento escondido
 btnShow.addEventListener("click", () => {
   if (listHidden.style.display === "none") {
@@ -77,27 +76,27 @@ btnShow.addEventListener("click", () => {
   }
 });
 
-subItens1.style.display = "none"; 
+subItens1.style.display = "none";
 item1.addEventListener("click", () => {
-  if (subItens1.style.display === "none") {   
+  if (subItens1.style.display === "none") {
     subItens1.style.display = "block";
   } else {
     subItens1.style.display = "none";
   }
 });
 
-subItens2.style.display = "none"; 
+subItens2.style.display = "none";
 item2.addEventListener("click", () => {
-  if (subItens2.style.display === "none") {  
+  if (subItens2.style.display === "none") {
     subItens2.style.display = "block";
   } else {
     subItens2.style.display = "none";
   }
 });
 
-subOrdenar.style.display = "none"; 
+subOrdenar.style.display = "none";
 ordenar.addEventListener("click", () => {
-  if (subOrdenar.style.display === "none") {  
+  if (subOrdenar.style.display === "none") {
     subOrdenar.style.display = "block";
   } else {
     subOrdenar.style.display = "none";
@@ -105,9 +104,10 @@ ordenar.addEventListener("click", () => {
 });
 
 bbad.addEventListener("click", () => {
-  dadosFiltrados= info.filtrarCategorias(dados, bbad.innerHTML);
+  dadosFiltrados = info.filtrarCategorias(dados, bbad.innerHTML);
   imagens(dadosFiltrados);
   atualizarItens();
+  calculoAgregadoCategorias(dados);
 });
 
 bcSaul.addEventListener("click", () => {
@@ -152,5 +152,23 @@ zA.addEventListener("click", () => {
   atualizarItens();
 });
 
+/*
+const teste = info.filtrar(20, 62).toFixed(2);
+console.log(teste);
+*/
+function calculoAgregadoCategorias(breaking_bad) {
+  const objetosVerdadeiros = breaking_bad.filter(
+    (objeto) => objeto.category === "Breaking Bad"
+  );
+  // Calcula a porcentagem em relação ao tamanho total da array original
+  const porcentagem = info.calculoAgregado(
+    objetosVerdadeiros.length,
+    breaking_bad.length
+  );
 
-
+  console.log(
+    `A porcentagem de personagens de Breaking Bad é de ${porcentagem.toFixed(
+      2
+    )}%.`
+  );
+}
