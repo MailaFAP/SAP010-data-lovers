@@ -26,7 +26,10 @@ function imagens(breaking_bad) {
   imgs.innerHTML = breaking_bad
     .map(
       (breaking_bad) =>
-        `<img src="${breaking_bad.img}" class="imgs-personagens" alt="imagens dos personagens">`
+        `<div class="imagem-nome">
+          <img src="${breaking_bad.img}" class="imgs-personagens" alt="imagens dos personagens">
+            <p class="nomesPersonagens">${breaking_bad.name}</p>
+        </div>`
     )
     .join("");
 }
@@ -170,6 +173,4 @@ function calculoAgregadoCategoria(dados, category) {
   const mensagem = `A porcentagem dos personagens de ${category} é de ${porcentagem.toFixed(2)}%.`;
   const resultadoElemento = document.getElementById("porcentagem-msg");
   resultadoElemento.textContent = mensagem; //Atualiza o conteúdo do elemento com a mensagem
-  
-
 }
