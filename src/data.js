@@ -26,6 +26,7 @@ function ordenar(dadosFiltrados, abobrinha) {
   return dadosFiltrados;
 }
 
+/*essa função calcula a porcentagem representada por uma determinada quantidade em relação a um valor total. Ela divide a quantidade pelo total e multiplica por 100, retornando o resultado final em forma de porcentagem.*/
 function calculoAgregado(quantidade, total) {
   return quantidade / total * 100;
 }

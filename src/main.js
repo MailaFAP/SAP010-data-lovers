@@ -24,6 +24,16 @@ const aZ = document.getElementById("a-z");
 const zA = document.getElementById("z-a");
 
 
+/*
+Esse código define uma função chamada "imagens" que recebe um parâmetro "breaking_bad". 
+Essa função esta sendo usada para exibir imagens e nomes de personagens em um elemento HTML.
+Dentro da função, o código utiliza a propriedade "innerHTML" do elemento "imgs" para definir o conteúdo HTML das imagens e nomes dos personagens. 
+Ele faz isso usando o método "map" no array "breaking_bad", que é passado como parâmetro para a função.
+Dentro da função "map", cada objeto "breaking_bad" do array é mapeado para uma string HTML que representa um bloco de imagem e nome do personagem. 
+O método "join" é chamado no array resultante do "map" para transformar todas as strings em uma única string, que é atribuída à propriedade "innerHTML" do elemento "imgs".
+No  final, a função "imagens" é chamada com um parâmetro "dados". O objeto "dados" é um array contendo informações sobre os personagens de Breaking Bad, como seus nomes e URLs de imagem. O resultado é que as imagens e nomes dos personagens serão renderizados no elemento HTML com o ID "imgs".
+*/
+
 function imagens(breaking_bad) {
   imgs.innerHTML = breaking_bad
     .map(
@@ -37,15 +47,24 @@ function imagens(breaking_bad) {
 }
 imagens(dados);
 
-const controle = document.querySelectorAll(".seta");
-let currentItem = 0;
-let maxItens = document.querySelectorAll(".imgs-personagens").length;
 
-controle.forEach((control) => {
+
+/*Esse código realiza o controle de um carrossel de imagens de personagens
+const controle - Seleciona todos os elementos do HTML que possuem a classe "seta" e os armazena na constante 
+let currentItem = 0 - Inicializa uma variável currentItem com o valor 0. Essa variável será usada para controlar o item atual exibido no carrossel.
+let maxItens - Seleciona todos os elementos do HTML que possuem a classe "imgs-personagens" e obtém o seu comprimento (quantidade de elementos). Esse valor é atribuído à variável maxItens, que representa o número máximo de itens no carrossel.
+controle.forEach((control) - Itera sobre cada elemento de controle utilizando o método forEach. Isso permite adicionar um event listener de clique a cada elemento de controle.
+const isLeft = control.classList.contains("seta-esquerda"); - Verifica se o elemento de controle clicado possui a classe "seta-esquerda". A variável isLeft será verdadeira se o elemento for a seta esquerda, caso contrário, será falsa.
+*/
+const controle = document.querySelectorAll(".seta");
+let currentItem = 0; 
+let maxItens = document.querySelectorAll(".imgs-personagens").length;//
+
+controle.forEach((control) => { 
   control.addEventListener("click", () => {
     const isLeft = control.classList.contains("seta-esquerda");
     if (isLeft) {
-      currentItem -= 9;
+      currentItem -= 9; // Se isLeft for verdadeiro, subtrai 9 de currentItem; caso contrário, adiciona 9 a currentItem. Isso permite avançar ou retroceder 9 itens no carrossel, dependendo da seta clicada.
     } else {
       currentItem += 9;
     }
@@ -61,17 +80,21 @@ controle.forEach((control) => {
     }
 
     const itens = document.querySelectorAll(".imgs-personagens");
-    itens[currentItem].scrollIntoView({
+    itens[currentItem].scrollIntoView({ //Utiliza a função scrollIntoView para rolar o elemento itens[currentItem] para a visualização, com um comportamento suave de rolagem.
       behavior: "smooth",
       inline: "start", //alinha de maneira horizontal no centro
     });
   });
 });
 
+
+// essa função é usada para atualizar o valor de maxItens quando há algum clique nos filtros, ela é chamada nos eventos de clique nos códigos abaixo
 function atualizarItens() {
   maxItens = document.querySelectorAll(".imgs-personagens").length;
 }
 
+
+//essa função é usada para esconder e mostrar as opções de filtros
 listHidden.style.display = "none"; // o estado inicial vai ser com o elemento escondido
 btnShow.addEventListener("click", () => {
   if (listHidden.style.display === "none") {
@@ -173,7 +196,10 @@ zA.addEventListener("click", () => {
   atualizarItens();
 });
 
-
+/*
+const objetosVerdadeiros - Utiliza o método filter no array "dados" para filtrar os objetos que possuem a propriedade "category" igual ao valor passado como parâmetro "category". Os objetos filtrados são armazenados na constante .
+const porcentagem - Chama uma função chamada "calculoAgregado" do data.js e passa como argumentos o comprimento do array "objetosVerdadeiros" e o comprimento do array original "dados". O resultado é armazenado na constante "porcentagem".
+ */
 function calculoAgregadoCategoria(dados, category) {
   const objetosVerdadeiros = dados.filter(
     (objeto) => objeto.category === category
@@ -184,7 +210,7 @@ function calculoAgregadoCategoria(dados, category) {
     dados.length
   );
 
-  const mensagem = `A porcentagem dos personagens de ${category} é de ${porcentagem.toFixed(2)}%.`;
+  const mensagem = `A porcentagem dos personagens de ${category} é de ${porcentagem.toFixed(2)}%.`; // Cria uma mensagem, onde insere o valor da variável "category" e da porcentagem (formatada com duas casas decimais) calculada anteriormente.
   const resultadoElemento = document.getElementById("porcentagem-msg");
   resultadoElemento.textContent = mensagem; //Atualiza o conteúdo do elemento com a mensagem
 }
