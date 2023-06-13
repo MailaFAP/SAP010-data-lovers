@@ -1,5 +1,5 @@
 import data from '../src/data.js';
-//este é o famoso mock
+//este é o famoso mock, que seria um banco de dados "falso" para poder testar a função
 const chuchu = [{ 
   name: "Fulano",
   category: "maracujá",
@@ -28,6 +28,7 @@ describe('filtrar', () => {
 describe('ordenar', () => {
   it('ordenar de A-Z', () => {
     const resultado = data.ordenar(chuchu, "A-Z");
+    //abrimos uma const para não ficar muito código dentro do expect, mas poderia ser lá tbm
     expect(resultado[0].name).toBe("Ciclano");
     //No chuchu, o indice 0 é Fulano. Depois de ordenado, o índice 0 é Ciclano.
   })

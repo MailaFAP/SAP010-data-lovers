@@ -1,6 +1,8 @@
 import data from "./data/breakingbad/breakingbad.js";
 import info from "./data.js";
+//aqui importamos o banco de dados do Breaking Bad e o arquivo data.js onde estão as funções para utilizarmos 
 
+//abaixo estão todas as declarações de elementos do html para manipularmos no js
 const imgs = document.getElementById("imgs-footer");
 const dados = data.breaking_bad;
 const btnShow = document.getElementById("botao");
@@ -80,6 +82,12 @@ btnShow.addEventListener("click", () => {
   }
 });
 
+//Este código é responsável por adicionar um evento de clique ao item1, 
+//que é um elemento HTML. Quando esse evento é acionado, o código verifica se o subItens1 
+//está definido como "none" em seu estilo (ou seja, invisível na tela). Se for esse o caso, 
+//ele altera o estilo do subItens1 para "block" (ou seja, fica visível na tela). 
+//Se subItens1 já estiver visível na tela, o código define seu estilo como "none" novamente 
+//(tornando-o invisível novamente). Esta é uma forma de criar um menu dropdown para o usuário interagir.
 subItens1.style.display = "none";
 item1.addEventListener("click", () => {
   if (subItens1.style.display === "none") {
@@ -113,7 +121,13 @@ bbad.addEventListener("click", () => {
   atualizarItens();
   calculoAgregadoCategoria(dados, "Breaking Bad");
 });
-
+//Este código está adicionando um evento de clique ao elemento HTML com o ID "bbad". 
+//Quando o elemento é clicado, o código filtra os dados usando um método chamado "filtrarCategorias", 
+//que é definido no objeto "info". Esse método filtra os dados por categoria, usando o texto dentro do elemento 
+//"bbad". Em seguida, o código chama a função "imagens" com os dados filtrados como argumento, 
+//atualiza os itens com a função "atualizarItens" e faz um cálculo agregado de categoria usando a função 
+//"calculoAgregadoCategoria".Essencialmente, este código está ajudando a filtrar e exibir dados específicos 
+//com base na categoria selecionada pelo usuário. Neste caso, a categoria é "Breaking Bad".
 bcSaul.addEventListener("click", () => {
   dadosFiltrados = info.filtrarCategorias(dados, bcSaul.innerHTML);
   imagens(dadosFiltrados);
