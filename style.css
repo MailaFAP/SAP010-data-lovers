@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(img/Group\ 8.png);
+  display: flex;
+  background-color: #000000;
+
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+#root {
+  display: flex;
+}
+
+header {
+  position: absolute;
+  width: 100vw;
+}
+
+.header.logo {
+  position: absolute;
+  width: 307px;
+  height: 136px;
+  left: 51px;
+  top: 49px;
+}
+
+.botao {
+  position: absolute;
+  width: 347px;
+  height: 59px;
+  left: 75%;
+
+  top: 49px;
+  background: #292929de;
+  border-radius: 35px;
+  color: #bdbdbd;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  align-items: center;
+}
+
+h1 {
+  position: absolute;
+  width: 721px;
+  height: 100px;
+  left: 38px;
+  top: 35vh; /*350px*/
+  margin: 0;
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 116px;
+  color: #ffffff;
+}
+
+.pontuaçao {
+  position: absolute;
+  width: 402px;
+  height: 32px;
+  left: 43px;
+  top: 47vh; /*509px;*/
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #008c06;
+  display: flex;
+}
+
+.ano-e-temporada {
+  position: absolute;
+  width: 402px;
+  height: 32px;
+  left: 160px;
+  top: 47vh; /*509px;*/
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+  display: flex;
+}
+
+.sintese {
+  position: absolute;
+  width: 622px;
+  height: 87px;
+  left: 42px;
+  top: 53vh; /*55px*/
+
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #747474;
+}
+
+.personagens {
+  position: absolute;
+  width: 100%;
+  height: 235px; 
+  bottom: 0;
+
+  background: #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.personagens::-webkit-scrollbar {
+  display: none;
+}
+
+.imgs-personagens {
+  border-radius: 10px;
+  height: 210px;
+  width: 177px;
+  transition: all 0.2s;
+  opacity: 80%;
+  margin-left: 30px; /*o espaço entre as imagens*/
+  display: inline-block; /*faz com que um item fique ao lado do outro*/
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.imgs-personagens:hover {
+  transform: scale(1);
+}
+
+.seta-esquerda,
+.seta-direita {
+  position: fixed;
+  width: 42px;
+  height: 234px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  cursor: pointer;
+}
+
+.seta-esquerda {
+  left: 0;
+  z-index: 99;
+}
+
+.seta-direita {
+  right: 0;
+}
+
+.aside {
+  display: flex;
+  position: absolute;
+  width: 290px;
+  height: 549px;
+  left: 77%;
+  top: 122px;
+}
+
+ul,
+li {
+  list-style: none;
+  line-height: 45px; /*80*/
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #bdbdbd;
+
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.subItens1 {
+  display: none;
+}
+
+.subItens2 {
+  display: none;
+}
+
+.subItemOrdenar {
+  display: none;
+}
+
+.porcentagem-msg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 2.5%;/*43px*/
+  top: 32%;/*32vh*/
+
+  width: auto;
+  height:auto;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #bdbdbd
+}
+
+.nomesPersonagens {
+  position: relative;
+  color: #ffffff;
+  width: auto; 
+  font-size: 20px;
+  align-self: flex-end;
+  margin-left: 40px;
+  margin-top: -10px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  color: #747474;
+}
+
+.imagem-nome {
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 385px) and (max-width: 768px) {
+  body {
+    background-color: #000000;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/Android\ Large\ -\ 1.png);
+  }
+
+  .personagens {
+    width: 100%;
+    height: 235px;
+    background: #000000;
+    align-items: center;
+    display: flex;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .botao {
+    top: 30px;
+    width: 50%;
+    max-width: 347px;
+    left: 47%;
+  }
+
+  h1 {
+    width: 320px;
+    height: 80px;
+    left: 22px;
+    top: 55vh;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  .pontuaçao,
+  .ano-e-temporada {
+    top: 60vh;
+    width: 200px;
+  }
+  .pontuaçao {
+    left: 22px;
+  }
+
+  .sintese {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    background-image: url(img/Rectangle\ 15.png);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 89px;
+    margin-top: 20px;
+  }
+
+  .aside {
+    top: 100px;
+    width: 50%;
+    max-width: 347px;
+    left: 47%;
+  }
+
+  .porcentagem-msg {
+    left: 22px;
+    top: 45%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /*tablets*/
+  .botao {
+    width: 100%;
+    max-width: 347px;
+    left: 55%;
+  }
+
+  .aside {
+    top: 120px;
+    width: 100%;
+    max-width: 300px;
+    left: 58%;
+  }
+
+  h1 {
+    width: 720px;
+    height: 100px;
+    left: 38px;
+    top: 45vh;
+    font-size: 70px;
+    margin: 0;
+  }
+
+  .pontuaçao,
+  .ano-e-temporada {
+    top: 55vh;
+    width: 200px;
+  }
+  .pontuaçao {
+    left: 38px;
+  }
+
+  .sintese {
+    top: 60vh;
+    left: 38px;
+    width: 550px;
+    height: 150px;
+  }
+  .porcentagem-msg {
+    left: 41px;
+    top: 43%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /*desktop*/
+  .botao {
+    width: 100%;
+    max-width: 347px;
+    left: 65%;
+  }
+
+  .aside {
+    top: 120px;
+    width: 100%;
+    max-width: 400px;
+    left: 63%;
+  }
+
+  h1 {
+    width: 720px;
+    height: 100px;
+    left: 38px;
+    top: 45vh;
+    font-size: 80px;
+    margin: 0;
+  }
+
+  .pontuaçao,
+  .ano-e-temporada {
+    top: 55vh;
+    width: 200px;
+  }
+  .pontuaçao {
+    left: 38px;
+  }
+
+  .sintese {
+    top: 60vh;
+    width: 650px;
+  }
+
+  .porcentagem-msg {
+    left: 41px;
+    top: 43%;
+  }
+}

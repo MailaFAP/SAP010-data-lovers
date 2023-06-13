@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--configuração inicial de media query-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="root">
+    <header class="header" id="header">
+      <figure class="logo" id="logo">
+        <img src="img/Group 1.png" alt="Logo Breaking Bad" />
+      </figure>
+      <div class="pesquisa" id="pesquisa">
+        <button class="botao" id="botao">Pesquisar Personagem</button>
+      </div>
+    </header>
+    <section class="sectionh1" id="sectionh1">
+      <div class="titulo" id="titulo">
+        <h1>Breaking Bad</h1>
+      </div>
+      <div class="classificaçao" id="classificaçao">
+        <p class="pontuaçao">9.8 pontos</p>
+        <p class="ano-e-temporada">2008 5 temporadas</p>
+      </div>
+      <article class="texto" id="texto">
+        <p class="sintese">
+          Walter White, um humilde professor de química que vê sua vida se
+          transformar quando descobre ser portador de um câncer terminal. Com
+          um passado brilhante como pesquisador, Walter amarga agora uma
+          terrível situação financeira trabalhando como professor em uma
+          escola de ensino médio.
+        </p>
+      </article>
+    </section>
+
+    <aside class="aside" id="aside">
+      <ul>
+        <li class="filtro-status" id="filtro-status">
+          <a> Status de vida</a>
+          <br>
+          <ul>
+            <li class="subItens1" id="subItens1">
+              <a id="alive">Alive</a>
+              <br>
+              <a id="deceased">Deceased</a>
+              <br>
+              <a id="dead">Presumed dead</a>
+              <br>
+            </li>
+          </ul>
+        </li>
+        <li class="filtro-categoria" id="filtro-categoria">
+          <a>Categoria</a>
+          <br>
+          <ul>
+            <li class="subItens2" id="subItens2">
+              <a id="Breaking-Bad">Breaking Bad</a>
+              <br>
+              <a id="Better-Cal-Saul">Better Call Saul</a>
+              <br>
+              <a id="Breaking-Better">Breaking Bad, Better Call Saul</a>
+              <br>
+            </li>
+          </ul>
+          <ul>
+            <li class="ordenar" id="ordenar">
+              <a id="itemOrdenar">Ordenar</a>
+              <ul>
+                <li class="subItemOrdenar" id="subItemOrdenar">
+                  <a id="a-z">A-Z</a>
+                  <br>
+                  <a id="z-a">Z-A</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <section class="porcentagem-msg" id="porcentagem-msg"></section>
+    <footer class="personagens" id="personagens">
+      <div class="seta-esquerda seta" id="seta-esquerda">
+        <img src="img/Vector 3.png" alt="seta para esquerda" />
+      </div>
+      <div id="imgs-footer"></div>
+      <div class="seta-direita seta" id="seta-direita">
+        <img src="img/Vector 2.png" alt="seta para esquerda" />
+      </div>
+    </footer>
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
