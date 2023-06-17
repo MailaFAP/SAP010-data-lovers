@@ -88,7 +88,8 @@ controle.forEach((control) => {
 });
 
 
-// essa função é usada para atualizar o valor de maxItens quando há algum clique nos filtros, ela é chamada nos eventos de clique nos códigos abaixo
+// essa função é usada para atualizar o valor de maxItens quando há algum clique nos filtros,
+// ela é chamada nos eventos de clique nos códigos abaixo
 function atualizarItens() {
   maxItens = document.querySelectorAll(".imgs-personagens").length;
 }
