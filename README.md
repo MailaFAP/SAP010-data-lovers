@@ -127,7 +127,7 @@ usuário necessita.
 
 ### Histórias de usuário
 Nosso projeto foi desenvolvido para fãns, pessoas interessadas em conhecer um pouco mais sobre a série e os personagens. 
-Para isso desenvolvemos um desing pensado para que quando o usuário entrasse em nosso site pudesser ver uma breve explicação sobre a série, um campo de pesquisa de personagens separados por categoria, status e podendo ser ordenado de A-Z e de Z-A. 
+Para isso desenvolvemos um desing pensado para que quando o usuário entrasse em nosso site pudesse ver uma breve explicação sobre a série, um campo de pesquisa de personagens separados por categoria, status e podendo ser ordenado de A-Z e de Z-A. 
 
 
 ### Desenho de interface do usuário
@@ -150,3 +150,30 @@ https://www.figma.com/proto/I5oW246kg6rO19j5xa2Pnr/Untitled?type=design&node-id=
 * [GitHub Pages](https://pages.github.com/)
 * [Node.js](https://nodejs.org/)
 * [Jest](https://jestjs.io/)
+
+## Considerações Gerais 
+
+Nosso projeto foi dividido da seguinte maneira:
+
+### src/index.html
+
+Aqui entra a página que vai ser exibida ao usuário. Também serve para indicar quais scripts serão utilizados e juntar tudo o que foi feito.
+
+### src/main.js
+
+Utilizamos para todos os códigos que tenham a ver com a exibição dos dados na tela. Com isto nos referimos basicamente à interação com o DOM. Operações como criação de nós, registro de manejadores de eventos (event listeners ou event handlers) e etc.
+
+Neste arquivo você encontrará uma séris de imports. Cada um destes imports criará uma variável data com os dados correspondentes à fonte escolhida.
+
+### src/data.js
+
+Contém toda a funcionalidade que corresponde a obter, processar e manipular dados (suas funções):
+Estas funções são puras e independentes do DOM. Estas funções foram usadas no arquivo src/main.js, ao carregar a página e a cada vez que o usuário interagir com a interface (cliques, seleções, filtros, ordenação, etc).
+
+### src/data
+
+Nesta pasta estão os dados de diferentes fontes. Você vai encontrar uma pasta para cada fonte, e dentro de cada pasta estão dois arquivos: um com a extensão .js e outro .json.
+
+### test/data.spec.js
+
+Você também deverá fazer os teste unitários das funções implementadas no arquivo data.js.
